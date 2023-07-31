@@ -10,7 +10,7 @@
 string InputWords(string message)
 {
     Console.WriteLine(message);
-    string word = Console.ReadLine();
+    string word = Console.ReadLine()!;
     return word;
 }
 
@@ -33,11 +33,11 @@ string[] CreateArrayLenWordsAreLessThenTree(string[] words)
     {
         if (words[i].Length <= 3)
         {
-            strWords += words[i]+" ";
+            strWords += words[i]+"/t";
         }
     }
-    strWords = strWords.Substring(0, strWords.Length-1);
-    string[] arrayLenWordsAreLessThenTree = strWords.Split(' ');
+    strWords = strWords.Substring(0,strWords.Length-2);
+    string[] arrayLenWordsAreLessThenTree = strWords.Split("/t");
     return arrayLenWordsAreLessThenTree;
 }
 
