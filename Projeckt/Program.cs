@@ -33,18 +33,18 @@ string[] CreateArrayLenWordsAreLessThenTree(string[] words)
     {
         if (words[i].Length <= 3)
         {
-            strWords += words[i]+"/t";
+            strWords += words[i]+ "\t";
         }
     }
     if (strWords.Length == 0)
     {
-       return strWords.Split("/t");
+       return strWords.Split("\t");
     }
-    strWords = strWords.Substring(0,strWords.Length-2);
-    return strWords.Split("/t");;
+    strWords = strWords.Substring(0,strWords.Length-1);
+    return strWords.Split("\t");;
 }
 
-
+Console.Clear();
 string[] arrayWords = CreateArray("Введите количество строк: ");
 string[] arrayWordlenLessTheree = CreateArrayLenWordsAreLessThenTree(arrayWords);
 Console.Write($"[{string.Join(", ", arrayWords)}] --> [{string.Join(", ", arrayWordlenLessTheree)}]");
