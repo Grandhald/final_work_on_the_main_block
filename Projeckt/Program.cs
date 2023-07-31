@@ -36,9 +36,12 @@ string[] CreateArrayLenWordsAreLessThenTree(string[] words)
             strWords += words[i]+"/t";
         }
     }
+    if (strWords.Length == 0)
+    {
+       return strWords.Split("/t");
+    }
     strWords = strWords.Substring(0,strWords.Length-2);
-    string[] arrayLenWordsAreLessThenTree = strWords.Split("/t");
-    return arrayLenWordsAreLessThenTree;
+    return strWords.Split("/t");;
 }
 
 
